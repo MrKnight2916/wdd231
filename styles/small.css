@@ -123,12 +123,6 @@ main h1 {
     background: linear-gradient(135deg, #eef2f7, #dfe7ef);
 }
 
-.profile-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 .course-filters {
     display: flex;
     flex-wrap: wrap;
