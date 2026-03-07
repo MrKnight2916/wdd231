@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #e63946;
+    --background-color: #f1f5f9;
+    --surface-color: #ffffff;
+    --text-color: #1f2937;
+    --muted-text: #475569;
+    --border-color: #dbe2ea;
+    --completed-color: #dff3e4;
+    --not-completed-color: #f8fafc;
+    --max-width: 1200px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --radius: 14px;
+    --font-family: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-width: 320px;
+}
+
+header,
+main,
+footer {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-branding span {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#menu-button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: white;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: var(--secondary-color);
+}
+
+.navigation a.active {
+    background-color: var(--accent-color);
+}
+
+main h1 {
+    font-size: 2rem;
+    margin: 1rem 0 1.25rem;
+}
+
+.main-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.card p,
+.card div {
+    padding: 1rem;
+}
+
+.photo-placeholder {
+    min-height: 220px;
+    display: grid;
+    place-items: center;
+    color: var(--muted-text);
+    background: linear-gradient(135deg, #eef2f7, #dfe7ef);
+}
+
+.course-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.filter-button {
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    opacity: 0.9;
+}
+
+.active-filter {
+    background-color: var(--accent-color);
+}
+
+.credit-total {
+    padding: 0 1rem 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.course-container {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0 1rem 1rem;
+}
+
+.course-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--not-completed-color);
+    color: var(--text-color);
+}
+
+.course-card.completed {
+    background-color: var(--completed-color);
+    border-color: #8bc34a;
+}
+
+footer {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-weight: 700;
+    transition: opacity 0.25s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    opacity: 0.8;
+}

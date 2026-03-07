@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    .navigation {
+        grid-column: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        text-align: center;
+    }
+}
