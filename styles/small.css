@@ -146,7 +146,7 @@ main h1 {
 }
 
 .active-filter {
-    background-color: var(--accent-color);
+    background-color: #b91c1c;
 }
 
 .credit-total {
