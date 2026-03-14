@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     min-width: 320px;
