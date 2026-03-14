@@ -203,3 +203,147 @@ footer {
 .social-links a:focus {
     opacity: 0.8;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.list {
+    display: block;
+}
+
+.list section {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.list img {
+    display: none;
+}
+
+/* DIRECTORY */
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#members section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* DIRECTORY */
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#members section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* -------- Chamber Directory -------- */
+
+.menu {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.menu button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu button:hover {
+    background-color: #34495e;
+}
+
+/* GRID VIEW */
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#members.grid section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#members.grid section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#members.grid img {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    margin: 0.5rem auto;
+}
+
+/* LIST VIEW */
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+#members.list img {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+    visibility: visible;
+}

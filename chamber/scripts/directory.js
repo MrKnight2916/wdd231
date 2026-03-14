@@ -16,6 +16,7 @@ const displayMembers = (members) => {
         const phone = document.createElement("p");
         const website = document.createElement("a");
         const image = document.createElement("img");
+        const level = document.createElement("p");
 
         name.textContent = member.name;
         address.textContent = member.address;
@@ -30,10 +31,19 @@ const displayMembers = (members) => {
         image.setAttribute("loading", "lazy");
         image.setAttribute("width", "200");
 
-        card.appendChild(name);
+        if (member.membership === 3) {
+            level.textContent = "Membership: Gold";
+        } else if (member.membership === 2) {
+            level.textContent = "Membership: Silver";
+        } else {
+            level.textContent = "Membership: Member";
+        }
+ 
         card.appendChild(image);
+        card.appendChild(name);
         card.appendChild(address);
         card.appendChild(phone);
+        card.appendChild(level);
         card.appendChild(website);
 
         membersContainer.appendChild(card);
@@ -41,3 +51,16 @@ const displayMembers = (members) => {
 };
 
 getMembers();
+
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
+
+gridButton.addEventListener("click", () => {
+    membersContainer.classList.add("grid");
+    membersContainer.classList.remove("list");
+});
+
+listButton.addEventListener("click", () => {
+    membersContainer.classList.add("list");
+    membersContainer.classList.remove("grid");
+});
