@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Tech Solutions",
+    "address": "123 Main Street",
+    "phone": "809-555-1234",
+    "website": "https://techsolutions.com",
+    "image": "tech.png",
+    "membership": "Gold"
+  },
+  {
+    "name": "Caribbean Marketing",
+    "address": "45 Ocean Ave",
+    "phone": "809-555-5678",
+    "website": "https://caribbeanmarketing.com",
+    "image": "marketing.png",
+    "membership": "Silver"
+  },
+  {
+    "name": "Island Bakery",
+    "address": "12 Palm Street",
+    "phone": "809-555-9012",
+    "website": "https://islandbakery.com",
+    "image": "bakery.png",
+    "membership": "Bronze"
+  },
+  {
+    "name": "Sunrise Travel",
+    "address": "88 Beach Road",
+    "phone": "809-555-1111",
+    "website": "https://sunrisetravel.com",
+    "image": "travel.png",
+    "membership": "Gold"
+  },
+  {
+    "name": "Green Market",
+    "address": "21 Market Street",
+    "phone": "809-555-2222",
+    "website": "https://greenmarket.com",
+    "image": "market.png",
+    "membership": "Silver"
+  },
+  {
+    "name": "Ocean Fitness",
+    "address": "9 Fitness Blvd",
+    "phone": "809-555-3333",
+    "website": "https://oceanfitness.com",
+    "image": "fitness.png",
+    "membership": "Bronze"
+  },
+  {
+    "name": "Digital Creators",
+    "address": "77 Tech Park",
+    "phone": "809-555-4444",
+    "website": "https://digitalcreators.com",
+    "image": "digital.png",
+    "membership": "Gold"
+  }
+]
