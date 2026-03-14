@@ -23,8 +23,22 @@
         <h2>Chamber Directory</h2>
 
         <div class="menu">
-            <button id="grid">Grid View</button>
-            <button id="list">List View</button>
+            <button id="grid" aria-label="Grid View">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+            </button>
+        
+            <button id="list" aria-label="List View">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="3"></rect>
+                    <rect x="3" y="10" width="18" height="3"></rect>
+                    <rect x="3" y="15" width="18" height="3"></rect>
+                </svg>
+            </button>
         </div>
 
         <section id="members" class="grid"></section>

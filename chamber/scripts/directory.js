@@ -58,9 +58,18 @@ const listButton = document.querySelector("#list");
 gridButton.addEventListener("click", () => {
     membersContainer.classList.add("grid");
     membersContainer.classList.remove("list");
+
+    gridButton.classList.add("active");
+    listButton.classList.remove("active");
 });
 
 listButton.addEventListener("click", () => {
     membersContainer.classList.add("list");
     membersContainer.classList.remove("grid");
+
+    listButton.classList.add("active");
+    gridButton.classList.remove("active");
 });
+
+gridButton.classList.add("active");
+

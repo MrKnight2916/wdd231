@@ -278,22 +278,35 @@ footer {
 /* -------- Chamber Directory -------- */
 
 .menu {
-    margin: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
 }
 
 .menu button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border: none;
-    background-color: #2c3e50;
-    color: white;
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 0.6rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.menu button svg {
+    fill: #333;
 }
 
 .menu button:hover {
-    background-color: #34495e;
+    background: #ddd;
+}
+
+.menu button.active {
+    background: #333333;
+}
+
+.menu button.active svg {
+    fill: white;
 }
 
 /* GRID VIEW */
@@ -302,6 +315,31 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+}
+
+#members.grid h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#members.grid p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+#members.grid a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+#members.grid a:hover {
+    background: #555;
 }
 
 #members.grid section {
@@ -321,10 +359,11 @@ footer {
 
 #members.grid img {
     display: block;
-    max-width: 150px;
+    margin: 0 auto 0.8rem auto;
+    width: 120px;
     height: auto;
-    margin: 0.5rem auto;
 }
+
 
 /* LIST VIEW */
 
@@ -333,16 +372,25 @@ footer {
     flex-direction: column;
 }
 
+#members.list a {
+    color: #333;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+
 #members.list section {
     display: grid;
     grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
 }
 
 #members.list img {
     display: block;
-    width: 80px;
+    width: 70px;
     height: auto;
     margin: 0 auto;
     visibility: visible;
