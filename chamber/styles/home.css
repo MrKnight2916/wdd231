@@ -1,0 +1,323 @@
+/* HOME.CSS BASE + WEATHER EXTENDED */
+
+/* HERO */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+.hero-text h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.hero-text .cta {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.hero-text .cta:hover {
+    background: #e6c200;
+}
+
+/* MAIN GRID */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+@media(min-width:768px) {
+    .home-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* EVENTS, WEATHER, SPOTLIGHT */
+.events,
+.weather,
+.spotlight {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* EVENTS */
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.events h3 {
+    text-align: center;
+    color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-date {
+    font-weight: bold;
+    color: #1e90ff;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.event-title {
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+}
+
+.event-desc {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.event-link {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.event-link:hover {
+    background: #e6c200;
+}
+
+/* WEATHER ACTUALIZADO */
+
+/* Contenedor general */
+.weather {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Título */
+.weather h3 {
+    color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* DÍA ACTUAL */
+.current-weather {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.current-weather img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.current-weather .temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.2rem 0;
+}
+
+.current-weather .desc {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #555;
+    margin: 0.2rem 0;
+}
+
+.current-weather:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* TARJETAS PRONÓSTICO */
+.forecast-day {
+    background: #fff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.3rem;
+}
+
+.forecast-day .day-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.forecast-day .day-temp,
+.forecast-day .day-desc,
+.forecast-day .day-minmax {
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
+    text-transform: capitalize;
+}
+
+.forecast-day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENEDOR DE PRONÓSTICO */
+.forecast-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1.5rem;
+    /* mayor separación entre tarjetas */
+    justify-items: center;
+    margin-top: 0.5rem;
+}
+
+/* SPOTLIGHT */
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight h3 {
+    color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+#spotlight-container section {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#spotlight-container section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#spotlight-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+#spotlight-container h4 {
+    margin: 0.3rem 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+#spotlight-container .tagline {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+#spotlight-container .description {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+#spotlight-container .category {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #1e90ff;
+    margin-bottom: 0.3rem;
+}
+
+#spotlight-container .contact {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+#spotlight-container .socials a {
+    margin: 0 0.2rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #333;
+}
+
+#spotlight-container .socials a:hover {
+    text-decoration: underline;
+}
+
+#spotlight-container a.website {
+    display: inline-block;
+    margin-top: 0.3rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#spotlight-container a.website:hover {
+    text-decoration: underline;
+}

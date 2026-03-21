@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Tech Solutions",
+    "tagline": "Innovating Your Business",
+    "description": "We provide cutting-edge tech solutions for small and medium businesses.",
+    "website": "https://techsolutions.com",
+    "image": "techsolutions.png",
+    "membership": 3,
+    "category": "Tech",
+    "featured": true,
+    "contact": "809-555-1234",
+    "socials": {
+      "facebook": "https://facebook.com/techsolutions",
+      "linkedin": "https://linkedin.com/company/techsolutions"
+    }
+  },
+  {
+    "name": "Sunrise Travel",
+    "tagline": "Explore the World",
+    "description": "Personalized travel packages and unforgettable experiences.",
+    "website": "https://sunrisetravel.com",
+    "image": "sunrisetravel.png",
+    "membership": 2,
+    "category": "Travel",
+    "featured": true,
+    "contact": "809-555-1111",
+    "socials": {
+      "instagram": "https://instagram.com/sunrisetravel"
+    }
+  },
+  {
+    "name": "Ocean Fitness",
+    "tagline": "Your Health, Our Mission",
+    "description": "State-of-the-art gym and wellness programs for all ages.",
+    "website": "https://oceanfitness.com",
+    "image": "oceanfitness.png",
+    "membership": 3,
+    "category": "Fitness",
+    "featured": true,
+    "contact": "809-555-3333",
+    "socials": {
+      "facebook": "https://facebook.com/oceanfitness"
+    }
+  },
+  {
+    "name": "Caribbean Marketing",
+    "tagline": "Marketing with Impact",
+    "description": "Creative campaigns that make your brand shine.",
+    "website": "https://caribbeanmarketing.com",
+    "image": "caribbeanmarketing.png",
+    "membership": 2,
+    "category": "Marketing",
+    "featured": true,
+    "contact": "809-555-5678",
+    "socials": {
+      "linkedin": "https://linkedin.com/company/caribbeanmarketing"
+    }
+  },
+  {
+    "name": "Island Bakery",
+    "tagline": "Freshly Baked Daily",
+    "description": "Delicious baked goods made with love and care.",
+    "website": "https://islandbakery.com",
+    "image": "islandbakery.png",
+    "membership": 1,
+    "category": "Food",
+    "featured": false,
+    "contact": "809-555-9012",
+    "socials": {}
+  },
+  {
+    "name": "Digital Creators",
+    "tagline": "Design Your Future",
+    "description": "Web and graphic design solutions for modern businesses.",
+    "website": "https://digitalcreators.com",
+    "image": "digitalcreators.png",
+    "membership": 2,
+    "category": "Design",
+    "featured": true,
+    "contact": "809-555-4444",
+    "socials": {
+      "facebook": "https://facebook.com/digitalcreators",
+      "instagram": "https://instagram.com/digitalcreators"
+    }
+  }
+]

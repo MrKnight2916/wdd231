@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Chamber of Commerce</title>
+    <meta name="description"
+        content="Welcome to the Chamber of Commerce. Discover local businesses, events, and opportunities.">
+    <meta name="author" content="Eduardo">
+
+    <link rel="icon" href="../images/site-logo.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <button id="menu-button">☰</button>
+        <nav class="navigation" id="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="discover.html">Discover</a>
+            <a href="index.html" class="active" aria-current="page">Chamber</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="City view" loading="lazy">
+            <div class="hero-text">
+                <h2>Welcome to Our Chamber</h2>
+                <a href="#" class="cta" onclick="alert('Join page coming soon!')">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- MAIN GRID -->
+        <section class="home-grid">
+
+            <!-- EVENTS -->
+            <div class="events">
+                <h3>Events</h3>
+                <div class="event-card">
+                    <p class="event-date">📅 Jul 25, 2026 — 10:00 AM</p>
+                    <h4 class="event-title">Community Fair</h4>
+                    <p class="event-desc">Celebrate local businesses in the town square.</p>
+                    <a href="#" class="event-link">View Details</a>
+                </div>
+            </div>
+
+            <!-- WEATHER -->
+            <div class="weather">
+                <h3>Weather</h3>
+                <div class="current-weather">
+                    <img id="current-icon" src="" alt="" style="width:80px; height:80px;">
+                    <div class="current-info">
+                        <p id="current-temp" class="temp"></p>
+                        <p id="weather-desc" class="desc"></p>
+                        <p id="feels-like"></p>
+                        <p id="humidity"></p>
+                        <p id="wind"></p>
+                    </div>
+                </div>
+                <div id="forecast" class="forecast-cards"></div>
+            </div>
+
+            <!-- SPOTLIGHT -->
+            <div class="spotlight">
+                <h3>Spotlight</h3>
+                <div id="spotlight-container"></div>
+            </div>
+
+            
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chamber of Commerce</p>
+    </footer>
+
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+
+</body>
+
+</html>
