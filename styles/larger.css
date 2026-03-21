@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+
+    /* -------- HEADER -------- */
+
     header {
         grid-template-columns: auto 1fr;
     }
@@ -7,6 +10,8 @@
         display: none;
     }
 
+    /* -------- NAVIGATION -------- */
+
     .navigation {
         grid-column: auto;
         display: flex;
@@ -14,6 +19,8 @@
         justify-content: flex-end;
         align-items: center;
     }
+
+    /* -------- MAIN GRID -------- */
 
     .main-grid {
         grid-template-columns: 2fr 1fr;
@@ -24,9 +31,13 @@
         grid-column: 1 / -1;
     }
 
+    /* -------- COURSES -------- */
+
     .course-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* -------- FOOTER -------- */
 
     footer {
         grid-template-columns: repeat(3, 1fr);

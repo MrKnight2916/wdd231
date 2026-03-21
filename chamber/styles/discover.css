@@ -1,0 +1,75 @@
+/* -------- VISIT MESSAGE -------- */
+
+.visit {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#visit-message {
+    background: #f0f0f0;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* -------- INFO SECTION -------- */
+
+.info {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.info p {
+    max-width: 600px;
+    margin: 0.5rem auto;
+}
+
+/* -------- GALLERY -------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery figure {
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.gallery img {
+    border-radius: 6px;
+}
+
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* -------- HOVER EFFECT (desktop feel) -------- */
+
+.gallery figure:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+
+/* -------- RESPONSIVE -------- */
+
+@media (min-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

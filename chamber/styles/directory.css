@@ -1,10 +1,4 @@
-/* DIRECTORY */
-
-#members.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
+/* -------- DIRECTORY BASE -------- */
 
 #members section {
     border: 1px solid #ccc;
@@ -12,45 +6,7 @@
     text-align: center;
 }
 
-#members.list {
-    display: flex;
-    flex-direction: column;
-}
-
-#members.list section {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr 1fr 1fr;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* DIRECTORY */
-
-#members.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-#members section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-#members.list {
-    display: flex;
-    flex-direction: column;
-}
-
-#members.list section {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr 1fr 1fr;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* -------- Chamber Directory -------- */
+/* -------- MENU -------- */
 
 .menu {
     display: flex;
@@ -84,12 +40,30 @@
     fill: white;
 }
 
-/* GRID VIEW */
+/* -------- GRID VIEW -------- */
 
 #members.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+}
+
+#members.grid section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#members.grid section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#members.grid img {
+    display: block;
+    margin: 0 auto 0.8rem auto;
+    width: 120px;
 }
 
 #members.grid h2 {
@@ -117,34 +91,24 @@
     background: #555;
 }
 
-#members.grid section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#members.grid section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#members.grid img {
-    display: block;
-    margin: 0 auto 0.8rem auto;
-    width: 120px;
-    height: auto;
-}
-
-
-/* LIST VIEW */
+/* -------- LIST VIEW -------- */
 
 #members.list {
     display: flex;
     flex-direction: column;
+}
+
+#members.list section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🔴 REQUERIMIENTO: SIN IMÁGENES EN LIST */
+#members.list img {
+    display: none;
 }
 
 #members.list a {
@@ -153,20 +117,11 @@
     font-size: 0.9rem;
 }
 
+/* -------- RESPONSIVE -------- */
 
-#members.list section {
-    display: grid;
-    grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd;
-}
-
-#members.list img {
-    display: block;
-    width: 70px;
-    height: auto;
-    margin: 0 auto;
-    visibility: visible;
+@media (min-width: 768px) {
+    #members.list section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+    }
 }
