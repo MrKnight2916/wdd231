@@ -164,3 +164,9 @@ eventButtons.forEach(btn => {
         alert("Coming soon!"); // Message shown when clicked
     });
 });
+
+const joinBtn = document.querySelector(".cta");
+joinBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Join page coming soon!");
+});
