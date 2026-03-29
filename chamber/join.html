@@ -69,11 +69,11 @@
                 </label>
 
                 <label>Email:
-                    <input type="email" name="email" required placeholder="example@email.com">
+                    <input type="email" name="email" required autocomplete="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="example@email.com">
                 </label>
 
                 <label>Mobile Phone:
-                    <input type="tel" name="phone" required>
+                    <input type="tel" name="phone" required autocomplete="tel" pattern="\d{10}" placeholder="1234567890">
                 </label>
 
                 <label>Business Name:
