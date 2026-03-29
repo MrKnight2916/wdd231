@@ -10,27 +10,27 @@
         content="Apply to join the Chamber of Commerce and explore local business opportunities, events, and networking.">
     <meta name="author" content="Eduardo">
 
-<!-- Favicon -->
-<link rel="icon" href="../images/site-logo.svg">
+    <!-- Favicon -->
+    <link rel="icon" href="../images/site-logo.svg">
 
-<!-- Open Graph for social media -->
-<meta property="og:title" content="Chamber of Commerce">
-<meta property="og:description"
-    content="Welcome to the Chamber of Commerce. Apply to join the Chamber of Commerce and explore local business opportunities, events, and networking.">
-<meta property="og:image" content="https://mrknight2916.github.io/wdd231/images/hero.jpg">
-<meta property="og:url" content="https://mrknight2916.github.io/wdd231/chamber/">
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:description"
+        content="Welcome to the Chamber of Commerce. Apply to join the Chamber of Commerce and explore local business opportunities, events, and networking.">
+    <meta property="og:image" content="https://mrknight2916.github.io/wdd231/images/hero.jpg">
+    <meta property="og:url" content="https://mrknight2916.github.io/wdd231/chamber/">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- CSS -->
-<link rel="stylesheet" href="../styles/normalize.css">
-<link rel="stylesheet" href="../styles/small.css">
-<link rel="stylesheet" href="../styles/larger.css">
-<link rel="stylesheet" href="styles/home.css">
-<link rel="stylesheet" href="styles/join.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/join.css">
 
     <script src="scripts/join.js" defer></script>
 </head>
@@ -39,13 +39,13 @@
 
     <header>
         <h1>Join the Chamber</h1>
-                <button id="menu-button" aria-expanded="false">☰</button>
-                <nav class="navigation" id="nav-menu">
-                    <a href="../index.html">Home</a>
-                    <a href="discover.html">Discover</a>
-                    <a href="directory.html">Directory</a>
-                    <a href="index.html" class="active" aria-current="page">Join</a>
-                </nav>
+        <button id="menu-button" aria-expanded="false">☰</button>
+        <nav class="navigation" id="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="index.html" class="active" aria-current="page">Join</a>
+        </nav>
     </header>
 
     <main class="join-layout">
@@ -58,27 +58,36 @@
             <form method="get" action="thankyou.html">
 
                 <label>First Name:
-                    <input type="text" name="fname" required autocomplete="given-name" pattern="[A-Za-z\s\-]{2,}" placeholder="e.g. John" >
+                    <input type="text" name="fname" required autocomplete="given-name" pattern="[A-Za-z\s\-]{2,}"
+                        placeholder="e.g. John" title="Enter your first name">
                 </label>
 
                 <label>Last Name:
-                    <input type="text" name="lname" required autocomplete="family-name" pattern="[A-Za-z\s\-]{2,}" placeholder="e.g. Smith">
+                    <input type="text" name="lname" required autocomplete="family-name" pattern="[A-Za-z\s\-]{2,}"
+                        placeholder="e.g. Smith" title="Enter your last name">
                 </label>
 
                 <label>Organizational Title:
-                    <input type="text" name="orgtitle" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. CEO, Manager">
+                    <input type="text" name="orgtitle" required autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. CEO, Manager"
+                        title="Enter your organizational title">
                 </label>
 
                 <label>Email:
-                    <input type="email" name="email" required autocomplete="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="example@email.com">
+                    <input type="email" name="email" required autocomplete="email"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="example@email.com"
+                        title="Enter a valid email address">
                 </label>
 
                 <label>Mobile Phone:
-                    <input type="tel" name="phone" required autocomplete="tel" pattern="\d{10}" placeholder="1234567890">
+                    <input type="tel" name="phone" required autocomplete="tel" pattern="\d{10}" placeholder="1234567890"
+                        title="Enter your 10-digit mobile phone number">
                 </label>
 
                 <label>Business Name:
-                    <input type="text" name="business" required autocomplete="organization" pattern="[A-Za-z0-9\s\-]{2,}" placeholder="e.g. John's Bakery">
+                    <input type="text" name="business" required autocomplete="organization"
+                        pattern="[A-Za-z0-9\s\-]{2,}" placeholder="e.g. John's Bakery"
+                        title="Enter your business/organization name">
                 </label>
 
                 <label>Membership Level:
@@ -91,7 +100,7 @@
                 </label>
 
                 <label>Business Description:
-                    <textarea name="description"></textarea>
+                    <textarea name="description" title="Describe your organization or business"></textarea>
                 </label>
 
                 <input type="hidden" name="timestamp" id="timestamp">
@@ -103,42 +112,41 @@
         </section>
 
         <!-- ================= MEMBERSHIP CARDS ================= -->
-<section class="membership-cards">
+        <section class="membership-cards">
 
-    <!-- NP -->
-    <div class="card np">
-        <h3>NP Membership</h3>
-        <p>For non-profit organizations.</p>
-        <a href="#" data-modal="modal-np">Learn More</a>
-    </div>
+            <!-- NP -->
+            <div class="card np">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations.</p>
+                <a href="#" data-modal="modal-np">Learn More</a>
+            </div>
 
-    <!-- Bronze -->
-    <div class="card bronze">
-        <h3>Bronze Membership</h3>
-        <p>Basic benefits and networking access.</p>
-        <a href="#" data-modal="modal-bronze">Learn More</a>
-    </div>
+            <!-- Bronze -->
+            <div class="card bronze">
+                <h3>Bronze Membership</h3>
+                <p>Basic benefits and networking access.</p>
+                <a href="#" data-modal="modal-bronze">Learn More</a>
+            </div>
 
-    <!-- Silver -->
-    <div class="card silver">
-        <h3>Silver Membership</h3>
-        <p>Enhanced exposure and event discounts.</p>
-        <a href="#" data-modal="modal-silver">Learn More</a>
-    </div>
+            <!-- Silver -->
+            <div class="card silver">
+                <h3>Silver Membership</h3>
+                <p>Enhanced exposure and event discounts.</p>
+                <a href="#" data-modal="modal-silver">Learn More</a>
+            </div>
 
-    <!-- Gold -->
-    <div class="card gold">
-        <h3>Gold Membership</h3>
-        <p>Premium visibility and exclusive perks.</p>
-        <a href="#" data-modal="modal-gold">Learn More</a>
-    </div>
+            <!-- Gold -->
+            <div class="card gold">
+                <h3>Gold Membership</h3>
+                <p>Premium visibility and exclusive perks.</p>
+                <a href="#" data-modal="modal-gold">Learn More</a>
+            </div>
 
-</section>
+        </section>
 
     </main>
 
     <!-- ================= MODALS ================= -->
-    
     <div id="modal-np" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -151,7 +159,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div id="modal-bronze" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -164,7 +172,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div id="modal-silver" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -177,7 +185,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div id="modal-gold" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -203,13 +211,13 @@
                 X
             </a>
         </div>
-    
+
         <div class="footer-info">
             <p>
                 &copy; <span id="currentyear"></span> Eduardo | Dominican Republic
             </p>
         </div>
-    
+
         <div class="footer-modified">
             <p id="lastModified"></p>
         </div>
