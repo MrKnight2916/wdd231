@@ -165,8 +165,10 @@ eventButtons.forEach(btn => {
     });
 });
 
+/*/* Join page CTA 
 const joinBtn = document.querySelector(".cta");
 joinBtn.addEventListener("click", (e) => {
     e.preventDefault();
     alert("Join page coming soon!");
 });
+*/

@@ -7,18 +7,28 @@
 
 /* ===== VARIABLES ===== */
 :root {
-    --primary-color: #1e90ff;
-    --secondary-color: #2e8b57;
-    --accent-color: #ffd700;
-    --light-bg: #f0f8ff;
-    --text-color: #333;
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --accent-color: #e63946;
+    --background-color: #f1f5f9;
+    --surface-color: #ffffff;
+    --text-color: #1f2937;
+    --muted-text: #475569;
+    --border-color: #dbe2ea;
+    --completed-color: #dff3e4;
+    --not-completed-color: #f8fafc;
+    --max-width: 1200px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --radius: 14px;
+    --font-family: "Inter", sans-serif;
 }
 
 /* ===== BODY ===== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--light-bg);
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
     color: var(--text-color);
+    min-width: 320px;
 }
 
 /* ===== MAIN ===== */

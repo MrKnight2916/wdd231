@@ -9,8 +9,27 @@
     <meta name="description" content="Apply to join the Chamber of Commerce">
     <meta name="author" content="Eduardo">
 
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/join.css">
+<!-- Favicon -->
+<link rel="icon" href="../images/site-logo.svg">
+
+<!-- Open Graph for social media -->
+<meta property="og:title" content="Chamber of Commerce">
+<meta property="og:description"
+    content="Welcome to the Chamber of Commerce. Discover local businesses, events, and opportunities.">
+<meta property="og:image" content="https://mrknight2916.github.io/wdd231/images/hero.jpg">
+<meta property="og:url" content="https://mrknight2916.github.io/wdd231/chamber/">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="../styles/normalize.css">
+<link rel="stylesheet" href="../styles/small.css">
+<link rel="stylesheet" href="../styles/larger.css">
+<link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/join.css">
 
     <script src="scripts/join.js" defer></script>
 </head>
@@ -19,6 +38,13 @@
 
     <header>
         <h1>Join the Chamber</h1>
+                <button id="menu-button" aria-expanded="false">☰</button>
+                <nav class="navigation" id="nav-menu">
+                    <a href="../index.html">Home</a>
+                    <a href="directory.html">Directory</a>
+                    <a href="discover.html">Discover</a>
+                    <a href="index.html" class="active" aria-current="page">Chamber</a>
+                </nav>
     </header>
 
     <main class="join-layout">
@@ -76,31 +102,93 @@
         </section>
 
         <!-- ================= MEMBERSHIP CARDS ================= -->
-        <section class="membership-cards">
+<section class="membership-cards">
 
-            <div class="card np">
-                <h3>NP Membership</h3>
-                <p>For non-profit organizations.</p>
-            </div>
+    <!-- NP -->
+    <div class="card np">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations.</p>
+        <a href="#" data-modal="modal-np">Learn More</a>
+    </div>
 
-            <div class="card bronze">
-                <h3>Bronze Membership</h3>
-                <p>Basic benefits and networking access.</p>
-            </div>
+    <!-- Bronze -->
+    <div class="card bronze">
+        <h3>Bronze Membership</h3>
+        <p>Basic benefits and networking access.</p>
+        <a href="#" data-modal="modal-bronze">Learn More</a>
+    </div>
 
-            <div class="card silver">
-                <h3>Silver Membership</h3>
-                <p>Enhanced exposure and event discounts.</p>
-            </div>
+    <!-- Silver -->
+    <div class="card silver">
+        <h3>Silver Membership</h3>
+        <p>Enhanced exposure and event discounts.</p>
+        <a href="#" data-modal="modal-silver">Learn More</a>
+    </div>
 
-            <div class="card gold">
-                <h3>Gold Membership</h3>
-                <p>Premium visibility and exclusive perks.</p>
-            </div>
+    <!-- Gold -->
+    <div class="card gold">
+        <h3>Gold Membership</h3>
+        <p>Premium visibility and exclusive perks.</p>
+        <a href="#" data-modal="modal-gold">Learn More</a>
+    </div>
 
-        </section>
+</section>
 
     </main>
+
+    <!-- ================= MODALS ================= -->
+    
+    <div id="modal-np" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>NP Membership</h2>
+            <p>No cost membership for non-profit organizations.</p>
+            <ul>
+                <li>Community exposure</li>
+                <li>Event participation</li>
+                <li>Networking opportunities</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal-bronze" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bronze Membership</h2>
+            <p>Entry-level membership for small businesses.</p>
+            <ul>
+                <li>Directory listing</li>
+                <li>Basic advertising</li>
+                <li>Event access</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal-silver" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Silver Membership</h2>
+            <p>Enhanced business visibility.</p>
+            <ul>
+                <li>Featured directory listing</li>
+                <li>Event discounts</li>
+                <li>Advertising opportunities</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal-gold" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Gold Membership</h2>
+            <p>Premium benefits and exposure.</p>
+            <ul>
+                <li>Top-level promotion</li>
+                <li>Homepage spotlight</li>
+                <li>VIP event access</li>
+            </ul>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; Chamber of Commerce</p>
