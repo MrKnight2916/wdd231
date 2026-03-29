@@ -58,15 +58,15 @@
             <form method="get" action="thankyou.html">
 
                 <label>First Name:
-                    <input type="text" name="fname" required autocomplete="given-name">
+                    <input type="text" name="fname" required autocomplete="given-name" pattern="[A-Za-z\s\-]{2,}" placeholder="e.g. John" >
                 </label>
 
                 <label>Last Name:
-                    <input type="text" name="lname" required autocomplete="family-name">
+                    <input type="text" name="lname" required autocomplete="family-name" pattern="[A-Za-z\s\-]{2,}" placeholder="e.g. Smith">
                 </label>
 
                 <label>Organizational Title:
-                    <input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">
+                    <input type="text" name="orgtitle" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. CEO, Manager">
                 </label>
 
                 <label>Email:
@@ -78,7 +78,7 @@
                 </label>
 
                 <label>Business Name:
-                    <input type="text" name="business" required>
+                    <input type="text" name="business" required autocomplete="organization" pattern="[A-Za-z0-9\s\-]{2,}" placeholder="e.g. John's Bakery">
                 </label>
 
                 <label>Membership Level:
