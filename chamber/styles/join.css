@@ -119,6 +119,12 @@ a:focus {
     outline-offset: 2px;
 }
 
+.navigation a:focus {
+    outline: 2px solid var(--secondary-color);
+    /* borde azul */
+    outline-offset: 2px;
+}
+
 /* ===== REQUIRED ===== */
 input:required {
     border-left: 4px solid var(--accent-color);
