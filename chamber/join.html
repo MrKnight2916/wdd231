@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+
+    <meta name="description" content="Apply to join the Chamber of Commerce">
+    <meta name="author" content="Eduardo">
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Join the Chamber</h1>
+    </header>
+
+    <main class="join-layout">
+
+        <!-- ================= FORM ================= -->
+        <section class="join-container">
+
+            <h2>Membership Application</h2>
+
+            <form method="get" action="thankyou.html">
+
+                <label>First Name:
+                    <input type="text" name="fname" required autocomplete="given-name">
+                </label>
+
+                <label>Last Name:
+                    <input type="text" name="lname" required autocomplete="family-name">
+                </label>
+
+                <label>Organizational Title:
+                    <input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">
+                </label>
+
+                <label>Email:
+                    <input type="email" name="email" required placeholder="example@email.com">
+                </label>
+
+                <label>Mobile Phone:
+                    <input type="tel" name="phone" required>
+                </label>
+
+                <label>Business Name:
+                    <input type="text" name="business" required>
+                </label>
+
+                <label>Membership Level:
+                    <select name="membership">
+                        <option value="NP">NP Membership</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business Description:
+                    <textarea name="description"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit">Apply Now</button>
+
+            </form>
+
+        </section>
+
+        <!-- ================= MEMBERSHIP CARDS ================= -->
+        <section class="membership-cards">
+
+            <div class="card np">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations.</p>
+            </div>
+
+            <div class="card bronze">
+                <h3>Bronze Membership</h3>
+                <p>Basic benefits and networking access.</p>
+            </div>
+
+            <div class="card silver">
+                <h3>Silver Membership</h3>
+                <p>Enhanced exposure and event discounts.</p>
+            </div>
+
+            <div class="card gold">
+                <h3>Gold Membership</h3>
+                <p>Premium visibility and exclusive perks.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Chamber of Commerce</p>
+    </footer>
+
+</body>
+
+</html>
