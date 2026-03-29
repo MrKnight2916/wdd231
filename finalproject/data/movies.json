@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Sci-Fi",
+    "description": "A skilled thief steals corporate secrets through dream-sharing technology, but must plant an idea into a CEO's mind.",
+    "poster": "images/inception.jpg"
+  },
+  {
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Sci-Fi",
+    "description": "A team of explorers travel through a wormhole in space to ensure humanity's survival.",
+    "poster": "images/interstellar.jpg"
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "genre": "Action",
+    "description": "In a post-apocalyptic wasteland, Max teams up with Furiosa to flee from a tyrannical warlord.",
+    "poster": "images/madmax.jpg"
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "year": 2012,
+    "genre": "Action",
+    "description": "Batman comes out of exile to protect Gotham from the formidable terrorist Bane.",
+    "poster": "images/darkknightrises.jpg"
+  },
+  {
+    "title": "La La Land",
+    "year": 2016,
+    "genre": "Musical",
+    "description": "An aspiring actress and a jazz musician pursue their dreams while navigating a complex romance in Los Angeles.",
+    "poster": "images/lalaland.jpg"
+  },
+  {
+    "title": "The Greatest Showman",
+    "year": 2017,
+    "genre": "Musical",
+    "description": "The story of P.T. Barnum and the creation of his circus, celebrating imagination and inclusivity.",
+    "poster": "images/greatestshowman.jpg"
+  },
+  {
+    "title": "Get Out",
+    "year": 2017,
+    "genre": "Horror",
+    "description": "A young African-American man uncovers shocking secrets when visiting his white girlfriend's family estate.",
+    "poster": "images/getout.jpg"
+  },
+  {
+    "title": "A Quiet Place",
+    "year": 2018,
+    "genre": "Horror",
+    "description": "A family must live in silence to avoid mysterious creatures that hunt by sound.",
+    "poster": "images/quietplace.jpg"
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "genre": "Thriller",
+    "description": "A poor family schemes to become employed by a wealthy household, leading to unexpected consequences.",
+    "poster": "images/parasite.jpg"
+  },
+  {
+    "title": "Joker",
+    "year": 2019,
+    "genre": "Thriller",
+    "description": "Arthur Fleck's descent into madness transforms him into the criminal mastermind known as the Joker.",
+    "poster": "images/joker.jpg"
+  },
+  {
+    "title": "Coco",
+    "year": 2017,
+    "genre": "Animation",
+    "description": "A young boy journeys to the Land of the Dead to uncover his family's history and follow his passion for music.",
+    "poster": "images/coco.jpg"
+  },
+  {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": 2018,
+    "genre": "Animation",
+    "description": "Teen Miles Morales discovers his powers and teams up with Spider-people from other dimensions.",
+    "poster": "images/spidermanverse.jpg"
+  },
+  {
+    "title": "Soul",
+    "year": 2020,
+    "genre": "Animation",
+    "description": "A middle school music teacher discovers the meaning of life after an unexpected journey to the afterlife.",
+    "poster": "images/soul.jpg"
+  },
+{
+  "title": "Avengers: Endgame",
+  "year": 2019,
+  "genre": "Action/Sci-Fi",
+  "description": "The Avengers assemble once more to undo Thanos' actions and restore balance to the universe.",
+  "poster": "images/avengers_endgame.jpg"
+},
+{
+  "title": "Man of Steel",
+  "year": 2013,
+  "genre": "Action/Sci-Fi",
+  "description": "Clark Kent discovers his extraterrestrial origins and embraces his destiny as Superman to save humanity.",
+  "poster": "images/man_of_steel.jpg"
+},
+{
+  "title": "Doctor Strange",
+  "year": 2016,
+  "genre": "Action",
+  "description": "A brilliant but arrogant surgeon learns the mystic arts to protect the world from magical threats.",
+  "poster": "images/doctor_strange.jpg"
+},
+{
+  "title": "Wonder Woman",
+  "year": 2017,
+  "genre": "Action",
+  "description": "Diana, princess of the Amazons, leaves her home to fight alongside men in the war to end all wars, discovering her full powers.",
+  "poster": "images/wonder_woman.jpg"
+},
+{
+  "title": "Pitch Perfect",
+  "year": 2012,
+  "genre": "Comedy",
+  "description": "College student Beca joins an all-female a cappella group and helps them compete in national competitions with her unique style.",
+  "poster": "images/pitchperfect.jpg"
+}
+]
