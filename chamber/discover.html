@@ -10,10 +10,8 @@
     <meta name="description" content="Discover local attractions, culture, and information about our community.">
     <meta name="author" content="Eduardo">
 
-    <!-- Favicon -->
     <link rel="icon" href="../images/site-logo.svg">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/small.css">
     <link rel="stylesheet" href="../styles/larger.css">
@@ -22,7 +20,6 @@
 
 <body>
 
-    <!-- HEADER -->
     <header>
         <h1>Chamber of Commerce</h1>
 
@@ -36,17 +33,14 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
     <main>
 
         <h2>Discover Our Community</h2>
 
-        <!-- 🧠 VISIT MESSAGE -->
         <section class="visit">
             <p id="visit-message"></p>
         </section>
 
-        <!-- 📍 LOCAL INFO -->
         <section class="info">
             <h3>About Our City</h3>
             <p>
@@ -55,61 +49,29 @@
             </p>
         </section>
 
-        <!-- 🖼️ IMAGE GALLERY -->
-        <section class="gallery">
-
-            <figure>
-                <img src="images/discover1.jpg" alt="City view" loading="lazy">
-                <figcaption>Beautiful city skyline</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/discover2.jpg" alt="Local market" loading="lazy">
-                <figcaption>Popular local market</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/discover3.jpg" alt="Beach area" loading="lazy">
-                <figcaption>Relaxing beach area</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/discover4.jpg" alt="Cultural festival" loading="lazy">
-                <figcaption>Annual cultural festival</figcaption>
-            </figure>
-
-        </section>
+        <!-- ✅ NEW CARDS SECTION -->
+        <section class="cards" id="cards-container"></section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <div class="social-links">
-            <a href="https://github.com/MrKnight2916" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                GitHub
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                LinkedIn
-            </a>
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
-                X
-            </a>
+            <a href="https://github.com/MrKnight2916" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/" target="_blank">X</a>
         </div>
-    
+
         <div class="footer-info">
-            <p>
-                &copy; <span id="currentyear"></span> Eduardo | Dominican Republic
-            </p>
+            <p>&copy; <span id="currentyear"></span> Eduardo | Dominican Republic</p>
         </div>
-    
+
         <div class="footer-modified">
             <p id="lastModified"></p>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script src="../scripts/navigation.js" defer></script>
-    <script src="scripts/discover.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
 
 </body>
 

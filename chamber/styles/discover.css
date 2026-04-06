@@ -59,17 +59,104 @@
 /* -------- RESPONSIVE -------- */
 
 @media (min-width: 768px) {
-
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (min-width: 1024px) {
-
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
+}
 
+/* -------- CARDS SECTION -------- */
+
+.cards {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 280px;
+    /* tu tamaño */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+}
+
+/* TITLE (🔥 IMPORTANTE: evita que la imagen lo tape) */
+.card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* ADDRESS */
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+/* BUTTON */
+.card button {
+    margin-top: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.card button:hover {
+    background-color: #005fa3;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TABLET */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* HOVER IMAGE (NOT MOBILE) */
+@media (min-width: 641px) {
+    .card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
 }
