@@ -257,3 +257,62 @@ button {
         display: block;
     }
 }
+
+/* ===== FORMULARIO DE AGREGAR FAVORITO ===== */
+.add-favorite {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-favorite:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-favorite h2 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.add-favorite form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.add-favorite input {
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.add-favorite input:focus {
+    border-color: var(--primary-color);
+}
+
+.add-favorite button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.6rem 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-favorite button[type="submit"]:hover {
+    background-color: #256e49;
+}

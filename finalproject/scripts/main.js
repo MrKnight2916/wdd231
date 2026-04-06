@@ -8,9 +8,12 @@ async function initMovies() {
     if (!response.ok) throw new Error('Failed to fetch movies JSON');
     const movies = await response.json();
 
-    displaySpotlight(movies);
-    displayMovieCards(movies);
-    loadFavorites(movies); // ahora pasamos todas las películas
+    if (document.querySelector('#spotlight')) displaySpotlight(movies);
+    if (document.querySelector('#movies-container')) displayMovieCards(movies);
+    if (document.querySelector('#favorites')) loadFavorites(movies);
+
+    // Inicializar formulario solo en favorites.html
+    if (document.querySelector('#add-fav-form')) initAddFavoriteForm(movies);
 
   } catch (error) {
     console.error('Error loading movies:', error);
@@ -91,7 +94,7 @@ function openModal(movie) {
     <h2>${movie.title} (${movie.year})</h2>
     <img src="${movie.poster}" alt="${movie.title} poster">
     <p><strong>Genre:</strong> ${movie.genre}</p>
-    <p>${movie.description}</p>
+    <p>${movie.description || ''}</p>
   `;
 
   modal.style.display = 'flex';
@@ -110,16 +113,16 @@ function toggleFavorite(title, btn, movies) {
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   if (favorites.includes(title)) {
     favorites = favorites.filter(f => f !== title);
-    btn.classList.remove('active');
+    if(btn) btn.classList.remove('active');
   } else {
     favorites.push(title);
-    btn.classList.add('active');
+    if(btn) btn.classList.add('active');
   }
   localStorage.setItem('favorites', JSON.stringify(favorites));
-  loadFavorites(movies); // recargar favoritos
+  if (document.querySelector('#favorites')) loadFavorites(movies);
 }
 
-// NUEVO: mostrar favoritos con poster, título y botón
+// Cargar favoritos con poster, título y botón de remover
 function loadFavorites(movies) {
   const favContainer = document.querySelector('#favorites');
   if (!favContainer) return;
@@ -133,22 +136,67 @@ function loadFavorites(movies) {
   }
 
   favorites.forEach(title => {
-    const movie = movies.find(m => m.title === title);
-    if (!movie) return;
-
+    const movie = movies.find(m => m.title.toLowerCase() === title.toLowerCase());
     const card = document.createElement('div');
     card.className = 'fav-card';
-    card.innerHTML = `
-      <img src="${movie.poster}" alt="${movie.title} poster">
-      <h3>${movie.title} (${movie.year})</h3>
-      <button class="remove-fav-btn" data-title="${movie.title}">Remove ❤</button>
-    `;
+    if (movie) {
+      card.innerHTML = `
+        <img src="${movie.poster}" alt="${movie.title} poster">
+        <h3>${movie.title} (${movie.year})</h3>
+        <button class="remove-fav-btn" data-title="${movie.title}">Remove ❤</button>
+      `;
+    } else {
+      card.innerHTML = `
+        <h3>${title}</h3>
+        <button class="remove-fav-btn" data-title="${title}">Remove ❤</button>
+      `;
+    }
     favContainer.appendChild(card);
 
-    // evento para quitar favorito
     card.querySelector('.remove-fav-btn').addEventListener('click', () => {
-      toggleFavorite(movie.title, card.querySelector('.remove-fav-btn'), movies);
+      toggleFavorite(title, card.querySelector('.remove-fav-btn'), movies);
     });
+  });
+}
+
+// NUEVO: Formulario simplificado solo barra de título
+function initAddFavoriteForm(movies) {
+  const form = document.querySelector('#add-fav-form');
+  const input = document.querySelector('#fav-title');
+  if (!form) return;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const title = input.value.trim();
+    if (!title) return;
+
+    // Buscar en JSON para poster, year y genre
+    const movie = movies.find(m => m.title.toLowerCase() === title.toLowerCase());
+    const newMovie = movie || { title, year: '', genre: '', poster: 'assets/default-poster.png' };
+
+    // Guardar en localStorage
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.some(f => f.toLowerCase() === title.toLowerCase())) {
+      favorites.push(newMovie.title);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+
+    // Guardar datos completos para persistencia
+    let customMovies = JSON.parse(localStorage.getItem('customMovies')) || [];
+    if (!customMovies.some(m => m.title.toLowerCase() === newMovie.title.toLowerCase())) {
+      customMovies.push(newMovie);
+      localStorage.setItem('customMovies', JSON.stringify(customMovies));
+      movies.push(newMovie); // agregamos al array principal
+    }
+
+    loadFavorites(movies);
+    input.value = '';
+  });
+
+  // Cargar favoritos personalizados al iniciar
+  let customMovies = JSON.parse(localStorage.getItem('customMovies')) || [];
+  customMovies.forEach(m => {
+    if (!movies.some(movie => movie.title.toLowerCase() === m.title.toLowerCase())) movies.push(m);
   });
 }
 
